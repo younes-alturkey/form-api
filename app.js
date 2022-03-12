@@ -11,6 +11,10 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 sgMail.setApiKey(SENDGRID_API_KEY)
 
+app.get('/', (_, res) => {
+    res.send('Form API server is live')
+})
+
 app.post('/submit/:email', (req, res) => {
     const { body, params } = req
     const { email } = params
