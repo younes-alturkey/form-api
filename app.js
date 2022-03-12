@@ -1,6 +1,7 @@
 require('dotenv').config()
 const sgMail = require('@sendgrid/mail')
 const bodyParser = require('body-parser')
+const cors = require('cors')
 const express = require('express')
 const app = express()
 const { PORT, SENDGRID_API_KEY } = process.env
@@ -8,6 +9,7 @@ const appPort = PORT || 5000
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(cors())
 
 sgMail.setApiKey(SENDGRID_API_KEY)
 
@@ -36,13 +38,14 @@ app.post('/submit/:email', (req, res) => {
         color: #0a0e0c;
     "
 >
-    Made with ❤ via
+    Via
     <a
-        href="https://www.younesalturkey.sa"
+        href="https://github.com/younes-alturkey/form-api"
         target="_blank"
-        style="color: #ff1c3b; font-weight: 400; text-decoration: none"
+        style="text-decoration: none"
         >Form API
-    </a>
+    </a> by <a style="color: #ff1c3b; font-weight: 400; text-decoration: none" href="https://www.younesalturkey.sa"
+    target="_blank">Younes Alturkey ❤</a>
 </p>`
 
     const msg = {
