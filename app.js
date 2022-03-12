@@ -61,7 +61,7 @@ app.post('/submit/:email', (req, res) => {
             console.error(error)
         })
 
-    res.status(200).send(`Form data sent to ${email}.`)
+    res.end()
 })
 
 app.listen(appPort, () => {
