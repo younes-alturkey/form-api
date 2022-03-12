@@ -11,10 +11,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 sgMail.setApiKey(SENDGRID_API_KEY)
 
-app.get('/', (_, res) => {
-    res.send('Form API server is live')
-})
-
 app.post('/submit/:email', (req, res) => {
     const { body, params } = req
     const { email } = params
@@ -65,7 +61,7 @@ app.post('/submit/:email', (req, res) => {
             console.error(error)
         })
 
-    res.status(200).send('The form was submitted successfully.')
+    res.status(200).send(`Form data sent to ${email}.`)
 })
 
 app.listen(appPort, () => {
