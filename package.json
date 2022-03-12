@@ -1,0 +1,21 @@
+{
+    "private": true,
+    "license": "UNLICENSED",
+    "name": "form-api",
+    "productName": "Form API",
+    "version": "1.0.0",
+    "author": "Younes Alturkey <hi@younesalturkey.sa>",
+    "description": "Node server that accepts html form post request and sends it to an email address email using SendGrid",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "@sendgrid/mail": "^7.6.2",
+        "dotenv": "^16.0.0",
+        "express": "^4.17.3"
+    },
+    "engines": {
+        "node": "14.18.2"
+    }
+}
