@@ -42,10 +42,10 @@ app.post('/submit/:email', (req, res) => {
     <a
         href="https://github.com/younes-alturkey/form-api"
         target="_blank"
-        style="text-decoration: none"
+        style="text-decoration: none; color: #ff1c3b;"
         >Form API
     </a> by <a style="color: #ff1c3b; font-weight: 400; text-decoration: none" href="https://www.younesalturkey.sa"
-    target="_blank">Younes Alturkey ❤</a>
+    target="_blank">Younes ❤</a>
 </p>`
 
     const msg = {
