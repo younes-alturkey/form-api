@@ -3,8 +3,8 @@ const sgMail = require('@sendgrid/mail')
 const bodyParser = require('body-parser')
 const express = require('express')
 const app = express()
-const { APP_PORT, SENDGRID_API_KEY } = process.env
-const appPort = APP_PORT ?? 4000
+const { PORT, SENDGRID_API_KEY } = process.env
+const appPort = PORT || 5000
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
