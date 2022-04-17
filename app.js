@@ -30,23 +30,23 @@ app.post('/submit/:email', (req, res) => {
         html += p
     }
 
-    html += `<p
-    style="
-        padding: 0.3em 1em;
-        margin-top: 1.5em;
-        font-size: 0.8rem;
-        color: #0a0e0c;
-    "
->
-    Via
-    <a
-        href="https://github.com/younes-alturkey/form-api"
-        target="_blank"
-        style="text-decoration: none; color: #ff1c3b;"
-        >Form API
-    </a> by <a style="color: #ff1c3b; font-weight: 400; text-decoration: none" href="https://www.younesalturkey.sa"
-    target="_blank">Younes ❤</a>.
-</p>`
+    //     html += `<p
+    //     style="
+    //         padding: 0.3em 1em;
+    //         margin-top: 1.5em;
+    //         font-size: 0.8rem;
+    //         color: #0a0e0c;
+    //     "
+    // >
+    //     Via
+    //     <a
+    //         href="https://github.com/younes-alturkey/form-api"
+    //         target="_blank"
+    //         style="text-decoration: none; color: #ff1c3b;"
+    //         >Form API
+    //     </a> by <a style="color: #ff1c3b; font-weight: 400; text-decoration: none" href="https://www.younesalturkey.sa"
+    //     target="_blank">Younes ❤</a>.
+    // </p>`
 
     const msg = {
         to: `${email}`,
