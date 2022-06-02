@@ -17,7 +17,7 @@ app.post('/submit/:email', (req, res) => {
     const { body, params } = req
     const { email } = params
     const keys = Object.keys(body)
-    const name = body[keys[0]]
+    const name = body[keys[1]]
     let html = ''
 
     for (let i = 0; i < keys.length; i++) {
