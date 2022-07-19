@@ -4,7 +4,7 @@
     "name": "form-api",
     "productName": "Form API",
     "version": "1.0.0",
-    "author": "Younes Alturkey <hi@younesalturkey.sa>",
+    "author": "Younes Alturkey <hi@younes.ninja>",
     "description": "Node server that accepts html form post request and sends it to an email address email using SendGrid",
     "main": "app.js",
     "scripts": {
