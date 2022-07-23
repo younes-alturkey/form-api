@@ -30,11 +30,11 @@ app.post('/submit/:email', (req, res) => {
 
     const { email } = params
     const keys = Object.keys(body)
-    const name = body[keys[0]]
+    const subject = body[keys[0]]
 
     let htmlMiddlePart = ``
 
-    for (let i = 0; i < keys.length; i++) {
+    for (let i = 1; i < keys.length; i++) {
         if (!body[keys[i]]) continue
 
         const p = ` <div
@@ -189,7 +189,7 @@ app.post('/submit/:email', (req, res) => {
         msg = {
             to: `${email}`,
             from: 'hi@younes.ninja',
-            subject: `New Form Submitted: ${name}`,
+            subject: `${subject}`,
             html: `${html}`,
             attachments: filesToSend.map(file => {
                 return {
@@ -204,7 +204,7 @@ app.post('/submit/:email', (req, res) => {
         msg = {
             to: `${email}`,
             from: 'hi@younes.ninja',
-            subject: `New Form Submitted: ${name}`,
+            subject: `${subject}`,
             html: `${html}`,
         }
     }

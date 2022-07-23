@@ -18,6 +18,8 @@ Runs on http://localhost:5000.
 
 ## How To Use
 
+Note: first append is reserved for the subject of the email and is not ignored in the email body.
+
 ```bash
 <form action="https://ya-form-api.herokuapp.com/submit/[YOUR@EMAIL.COM]" method="POST"></form>
 ```
