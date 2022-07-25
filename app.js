@@ -31,10 +31,16 @@ app.post('/submit/:email', (req, res) => {
     const { email } = params
     const keys = Object.keys(body)
     const subject = body[keys[0]]
+    let ccList
+    try {
+        ccList = JSON.parse(body[keys[1]])
+    } catch (err) {
+        console.error('No cc list was parsed.')
+    }
 
     let htmlMiddlePart = ``
 
-    for (let i = 1; i < keys.length; i++) {
+    for (let i = 2; i < keys.length; i++) {
         if (!body[keys[i]]) continue
 
         const p = ` <div
@@ -189,6 +195,7 @@ app.post('/submit/:email', (req, res) => {
         msg = {
             to: `${email}`,
             from: 'hi@younes.ninja',
+            cc: ccList,
             subject: `${subject}`,
             html: `${html}`,
             attachments: filesToSend.map(file => {
